@@ -1,9 +1,9 @@
 #!/bin/bash
 #This file will install dependencies on Ubuntu server 18.04 as of 2018-09-26
 
-echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" > /etc/apt/sources.list
-echo "deb http://archive.ubuntu.com/ubuntu bionic-security main universe" > /etc/apt/sources.list
-echo "deb http://archive.ubuntu.com/ubuntu bionic-updates main universe" > /etc/apt/sources.list
+echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sources.list
+echo "deb http://archive.ubuntu.com/ubuntu bionic-security main universe" >> /etc/apt/sources.list
+echo "deb http://archive.ubuntu.com/ubuntu bionic-updates main universe" >> /etc/apt/sources.list
 
 apt update && apt upgrade -y
 
@@ -17,7 +17,7 @@ apt update
 
 apt-cache policy docker-ce
 
-apt install docker-ce
+apt install docker-ce -y
 
 systemctl status docker
 
